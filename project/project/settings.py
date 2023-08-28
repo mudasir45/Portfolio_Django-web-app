@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)bcj!67nxv_^nu0mbaylr5kcywgd+l0=lks*+0wmjhz#k000%c'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'main',
+    'blog',
+    'shop',
+    'accounts',
+    
     'whitenoise.runserver_nostatic',
 ]
 

@@ -1,14 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 def home(request):
-    return HttpResponse("Home page")
-
-def posts(request):
-    return HttpResponse("posts page ")
-
-def post(request):
-    return HttpResponse("single post page")
+    return render(request, 'index.html')
 
 def profile(request):
     return HttpResponse("profile page")
