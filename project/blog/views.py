@@ -8,5 +8,15 @@ def postlist(request):
     }
     return render(request, 'post_list.html', context)
 
-def post(request):
-    return render(request, 'post.html')
+def single_post(request, id):
+    post_obj = Post.objects.get(id = id)
+    context = {
+        'post_obj':post_obj,
+    }
+    return render(request, 'post.html', context)
+
+
+# Post Crud starts from here 
+def add_post(request):
+    
+    return render(request, 'add_post.html')

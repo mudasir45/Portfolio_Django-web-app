@@ -3,5 +3,9 @@ from . import views
 
 urlpatterns = [
     path('postlist/', views.postlist, name='postlist'),
-    path('post/', views.post, name='post'),
+    path('post/<int:id>', views.single_post, name='post'),
+    
+    # post crud urls 
+    path('add_post', views.add_post, name='add_post'),
+    
 ]
