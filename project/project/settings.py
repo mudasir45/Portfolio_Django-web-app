@@ -45,7 +45,14 @@ INSTALLED_APPS = [
     'accounts',
     
     'whitenoise.runserver_nostatic',
+    'crispy_forms',
+    'crispy_bootstrap4',
+    'django_filters',
 ]
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 MIDDLEWARE = [
     'whitenoise.middleware.WhiteNoiseMiddleware',

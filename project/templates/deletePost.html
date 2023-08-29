@@ -9,7 +9,7 @@
             <form action="" method="POST">
                 {% csrf_token %}
                 <h3>Are you sure you want to delete this post</h3>
-                <b><h2>{{item}}</h2></b>
+                <b><h4 class="text-primary">"{{item}}"</h4></b>
               
 
                 <a href="{% url 'postlist' %}"  class="btn btn-info mt-5">Cancel</a>

@@ -1,14 +1,33 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from .models import *
-from .forms import *
+from .forms import PostForm
+from .filters import PostFilter
 
+POSTS_PER_PAGE = 3
 def postlist(request):
     posts = Post.objects.all()
+    filterobj = PostFilter(request.GET, queryset = posts)
+    posts = filterobj.qs
+    
+    page = request.GET.get('page', 1)
+    PostPaginator = Paginator(posts, POSTS_PER_PAGE)
+    
+    try:
+        posts = PostPaginator.page(page)
+    except PageNotAnInteger:
+        posts = PostPaginator.page(1)
+    except EmptyPage:
+        posts = PostPaginator.page(PostPaginator.num_pages)
+    
     context = {
         'posts' : posts,
+        'filterobj' : filterobj,
+        'paginator' : PostPaginator,
+        'IsPaginated' : True,
     }
     return render(request, 'post_list.html', context)
 
