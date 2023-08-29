@@ -1,5 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import *
+from .forms import *
 
 def postlist(request):
     posts = Post.objects.all()
@@ -18,5 +19,15 @@ def single_post(request, id):
 
 # Post Crud starts from here 
 def add_post(request):
+    form = PostForm()
     
-    return render(request, 'add_post.html')
+    if request.method == 'POST':
+        form = PostForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+        return redirect('postlist/')
+    
+    context = {
+        'form': form
+    } 
+    return render(request, 'add_post.html', context)
