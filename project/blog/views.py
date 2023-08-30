@@ -36,8 +36,8 @@ def postlist(request):
     }
     return render(request, 'post_list.html', context)
 
-def single_post(request, id):
-    post_obj = Post.objects.get(id = id)
+def single_post(request, slug):
+    post_obj = Post.objects.get(slug = slug)
     context = {
         'post_obj':post_obj,
     }
@@ -62,8 +62,8 @@ def add_post(request):
 
 
 login_required(login_url='/')
-def edit_post(request, id):
-    post_obj = Post.objects.get(id = id)
+def edit_post(request, slug):
+    post_obj = Post.objects.get(slug = slug)
     form = PostForm(instance=post_obj)
     
     if request.method == 'POST':
@@ -79,8 +79,8 @@ def edit_post(request, id):
 
 
 login_required(login_url='/')
-def delete_post(request, id):
-    post_obj = Post.objects.get(id = id)
+def delete_post(request, slug):
+    post_obj = Post.objects.get(slug = slug)
     
     if request.method == 'POST':
         post_obj.delete()
