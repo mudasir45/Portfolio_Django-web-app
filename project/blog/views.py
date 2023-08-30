@@ -7,7 +7,7 @@ from .models import *
 from .forms import PostForm
 from .filters import PostFilter
 
-POSTS_PER_PAGE = 3
+POSTS_PER_PAGE = 2
 def postlist(request):
     posts = Post.objects.all()
     filterobj = PostFilter(request.GET, queryset = posts)
