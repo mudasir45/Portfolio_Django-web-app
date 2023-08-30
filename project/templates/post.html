@@ -22,9 +22,9 @@
                 <div class="d-flex align-items-center mb-3">
                     <h6 class=" pe-3 me-3 mb-0">{{post_obj.sub_headline}}</h6>
                 </div>
-                <p class="mb-4">{{post_obj.body}}</p>
+                <p class="mb-4">{{post_obj.body|safe}}</p>
                    {% for tag in post_obj.tags.all %}
-                    <span class="badge text-bg-info">{{tag.name}}</span>
+                    <span class="badge text-bg-info">#{{tag.name}}</span>
                 {% endfor %}
                    
                     
