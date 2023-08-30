@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6  border rounded shadow p-5 m-5">
+            <h1>Thanks for reaching out!</h1>
+            <p>Your message was succesfully send! I will try my best to get back to you</p>
+            <a class="btn btn-success text-center" href="{% url 'home' %}">Back to Home</a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
