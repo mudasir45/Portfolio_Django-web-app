@@ -99,16 +99,7 @@ DATABASES = {
     }
 }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'django_portfolio_db',
-#         'USER': 'postgres',
-#         'PASSWORD': '79615Postgres',
-#         'HOST': 'dpdatabase.cmci5jfqvkak.eu-north-1.rds.amazonaws.com',
-#         'PORT': '5432',
-#     }
-# }
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.1/ref/settings/#auth-password-validators
@@ -178,17 +169,3 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-# AWS_ACCESS_KEY_ID = 'AKIARZVNPTBP4LMGJJZG '
-# AWS_SECRET_ACCESS_KEY = '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'
-# AWS_STORAGE_BUCKET_NAME = 'djangoportfoliobucket'
-# AWS_S3_SIGNATURE_NAME = 's3v4',
-# AWS_S3_REGION_NAME = 'eu-north-1'
-# AWS_S3_FILE_OVERWRITE = False
-# AWS_DEFAULT_ACL =  None
-# AWS_S3_VERITY = True
-# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
-
-
-# 79615Postgres
