@@ -178,17 +178,17 @@ CKEDITOR_CONFIGS = {
     }
 }
 
-STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# STATICFILES_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
-AWS_ACCESS_KEY_ID = 'AKIARZVNPTBP4LMGJJZG '
-AWS_SECRET_ACCESS_KEY = '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'
-AWS_STORAGE_BUCKET_NAME = 'djangoportfoliobucket'
-AWS_S3_SIGNATURE_NAME = 's3v4',
-AWS_S3_REGION_NAME = 'eu-north-1'
-AWS_S3_FILE_OVERWRITE = False
-AWS_DEFAULT_ACL =  None
-AWS_S3_VERITY = True
-DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+# AWS_ACCESS_KEY_ID = 'AKIARZVNPTBP4LMGJJZG '
+# AWS_SECRET_ACCESS_KEY = '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'
+# AWS_STORAGE_BUCKET_NAME = 'djangoportfoliobucket'
+# AWS_S3_SIGNATURE_NAME = 's3v4',
+# AWS_S3_REGION_NAME = 'eu-north-1'
+# AWS_S3_FILE_OVERWRITE = False
+# AWS_DEFAULT_ACL =  None
+# AWS_S3_VERITY = True
+# DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
 
 
 # 79615Postgres
